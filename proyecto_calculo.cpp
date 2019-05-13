@@ -118,6 +118,81 @@ int main(){
 				cout<<i<<"    ||    "<<y<<endl;
 			}  
 			break;
+		case 6:
+			//F(x) = log2 (x) 
+			// Requerimiento de dato principal para la cantidad para x
+			cout<<"Ingrese el valor total para x: ";
+			cin>>n;
+			cout<<"F(x) = log2 (x)\n";
+			cout<<"Tabla de valores\n";
+			cout<<"x     ||   Y "<<endl;
+			for(int i = 1; i <= n ; i++){
+				y = log2(i);
+				cout.precision(3);
+				cout<<i<<"    ||    "<<y<<endl;
+			}  
+			break;
+		case 7:
+			// F(x) = log ((x+1))/((x-2))
+			// Requerimiento de dato principal para la cantidad para x
+			cout<<"Ingrese el valor total para x: ";
+			cin>>n;
+			n += 2;
+			cout<<"F(x) = log((x+1))/((x-2))\n";
+			cout<<"Tabla de valores\n";
+			cout<<"x     ||   Y "<<endl;
+			for(int i = 3; i <= n ; i++){
+				y = i+1;
+				y /= i-2;
+				y = log10(y);
+				cout.precision(3);
+				cout<<i<<"    ||    "<<y<<endl;
+			}  
+			break;
+		case 8:
+			// F(x) = ln(x)
+			// Requerimiento de dato principal para la cantidad para x
+			cout<<"Ingrese el valor total para x: ";
+			cin>>n;
+			cout<<"F(x) = ln(x)\n";
+			cout<<"Tabla de valores\n";
+			cout<<"x     ||   Y "<<endl;
+			for(int i = 1; i <= n ; i++){
+				y = log10(i)/log10(2.7281);
+				cout.precision(3);
+				cout<<i<<"    ||    "<<y<<endl;
+			}
+			break;
+		case 9:
+			// F(x) = log(sqrt((4-x))) 
+			// Requerimiento de dato principal para la cantidad para x
+			cout<<"Ingrese el valor total para x: ";
+			cin>>n;
+			cout<<"F(x) = log(sqrt((4-x)))\n";
+			cout<<"Tabla de valores\n";
+			cout<<"x     ||   Y "<<endl;
+			c = 4;
+			for(int i = 1; i <= n ; i++){
+				c--;
+				y = sqrt(4-c);
+				y = log10(y);
+				cout.precision(3);
+				cout<<c<<"    ||    "<<y<<endl;
+			}  
+			break;
+		case 10:
+			// F(x) = ln(25-x²) 
+			// Requerimiento de dato principal para la cantidad para x
+			cout<<"F(x) = ln(25-x^2)\n";
+			cout<<"Tabla de valores\n";
+			cout<<"x     ||   Y "<<endl;
+			for(int i = -4; i <= 4 ; i++){
+				y = (25)-(pow(i,2));
+				y = log10(y)/log10(2.7281);
+				cout.precision(3);
+				cout<<i<<"    ||    "<<y<<endl;
+			} 
+			break;	
 		default:
 			cout<<"Verifique";
 	}
